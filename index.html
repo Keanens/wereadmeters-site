@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>We Read Meters | On-site meter reading and reconciliation in Gauteng</title>
+<meta name="description" content="On-site meter reading and monthly reconciliation reports for body corporates, managing agents and commercial property in Gauteng. Every reading backed by a dated photo.">
+<meta property="og:title" content="We Read Meters">
+<meta property="og:description" content="Every meter read on site. Every reading backed by a photo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wereadmeters.co.za/">
+<meta name="theme-color" content="#0E3A5B">
+<link rel="canonical" href="https://wereadmeters.co.za/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23F59E0B'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%2314232D'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E3A5B;
+  --ink:#14232D;
+  --amber:#F59E0B;
+  --tint:#F1F5F8;
+  --line:#D5DEE5;
+  --soft:#36454F;
+  --pale:#C9D8E4;
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:#fff;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+a{color:var(--navy)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;margin:0}
+h2{font-size:clamp(26px,3.2vw,34px);color:var(--navy);letter-spacing:-0.01em}
+p{margin:0}
+
+/* top */
+.top{background:var(--navy);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}
+.logo{display:block;width:250px;height:auto}
+.btn{display:inline-block;font-family:var(--display);font-weight:600;font-size:16px;line-height:1;padding:15px 22px;border-radius:10px;text-decoration:none;white-space:nowrap}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-amber:hover{background:#FFB42E}
+.btn-line{border:1.5px solid #5E87A6;color:#fff}
+.btn-line:hover{border-color:#fff}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);grid-template-areas:"head head" "copy photo";gap:36px 56px;align-items:center;padding:56px 0 84px}
+.hero h1{grid-area:head;font-size:clamp(32px,5.2vw,58px);letter-spacing:-0.02em;color:#fff}
+.hero .copy{grid-area:copy}
+.hero .photo{grid-area:photo}
+.hero .lead{font-size:19px;line-height:1.55;color:var(--pale);max-width:34em}
+.hero .acts{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
+
+/* the meter photo */
+.photo{background:#0A2A43;border:1px solid #2F5876;border-radius:18px;padding:22px 22px 18px;transform:rotate(1.2deg)}
+.face{background:#E9EEF2;border-radius:10px;padding:26px 18px 20px}
+.drums{display:flex;gap:6px;justify-content:center}
+.drum{flex:1 1 0;max-width:56px;aspect-ratio:5/7;display:flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;border-radius:6px;font-family:var(--display);font-weight:700;font-size:clamp(24px,3.4vw,38px);line-height:1}
+.drum.tenth{background:var(--amber);color:var(--ink)}
+.unit{margin-top:12px;text-align:center;font-family:var(--display);font-weight:600;font-size:14px;color:#4A5863}
+.stamp{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px;line-height:1.3;color:var(--pale)}
+.stamp .ok{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:500}
+.tick{width:22px;height:22px;flex:none;border-radius:6px;background:var(--amber);display:inline-flex;align-items:center;justify-content:center}
+
+/* sections */
+.sec{padding:76px 0}
+.sec.tinted{background:var(--tint)}
+.sec h2{margin-bottom:22px}
+.prose{max-width:42em}
+.prose p + p{margin-top:14px}
+
+.facts{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.fact{padding:22px 24px 0 0}
+.fact + .fact{padding-left:24px;border-left:1px solid var(--line)}
+.fact b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(28px,3.6vw,40px);line-height:1.1;color:var(--navy)}
+.fact span{display:block;margin-top:6px;font-size:15px;line-height:1.45;color:var(--soft)}
+.after-facts{margin-top:28px;max-width:42em}
+
+.rows{border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:230px minmax(0,1fr);gap:28px;padding:18px 0;border-top:1px solid var(--line)}
+.row h3{font-family:var(--body);font-size:17px;font-weight:600;line-height:1.5}
+.row p{color:var(--soft)}
+
+.steps{list-style:none;margin:0;padding:0;max-width:44em}
+.step{display:flex;gap:20px}
+.rail{width:40px;flex:none;display:flex;flex-direction:column;align-items:center}
+.num{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--display);font-weight:600;font-size:17px;line-height:40px;text-align:center}
+.step:last-child .num{background:var(--amber);color:var(--ink)}
+.rail i{flex:1;width:2px;background:var(--line);margin-top:6px}
+.step .txt{padding:7px 0 26px}
+.step:last-child .txt{padding-bottom:0}
+.step h3{font-family:var(--body);font-size:17px;font-weight:600;line-height:1.5}
+.step p{color:var(--soft)}
+
+.why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 44px}
+.why > div{display:flex;gap:14px}
+.why .wide{grid-column:1 / -1;max-width:44em}
+.why h3{font-family:var(--body);font-size:17px;font-weight:600;line-height:1.5}
+.why p{color:var(--soft)}
+.why .tick{margin-top:3px;width:26px;height:26px;border-radius:7px}
+
+.serve{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;max-width:44em}
+.serve li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-weight:600}
+
+/* quote */
+.quote{background:var(--navy);color:#fff;padding:76px 0}
+.quote-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:56px;align-items:start}
+.quote h2{color:var(--amber);margin-bottom:14px}
+.quote .ask{font-size:19px;line-height:1.55;max-width:26em}
+.quote .acts{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px}
+.who{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.2}
+.contact a{display:block;margin-top:8px;color:#fff;text-decoration:none;font-size:18px}
+.contact a:hover{text-decoration:underline}
+.details{margin:26px 0 0;padding:22px 0 0;border-top:1px solid #2F5876;display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 14px;font-size:15px;line-height:1.5}
+.details dt{color:var(--pale)}
+.details dd{margin:0}
+
+.foot{background:#0A2A43;color:var(--pale);font-size:14px;line-height:1.5;padding:22px 0}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;grid-template-areas:"head" "copy" "photo";gap:28px;padding:36px 0 60px}
+  .photo{max-width:420px;transform:none}
+  .quote-grid{grid-template-columns:1fr;gap:40px}
+  .sec,.quote{padding:56px 0}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .logo{width:190px}
+  .bar .btn{padding:12px 14px;font-size:15px}
+  .facts{grid-template-columns:1fr}
+  .fact + .fact{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:22px}
+  .row{grid-template-columns:1fr;gap:4px}
+  .why{grid-template-columns:1fr}
+  .serve{grid-template-columns:1fr}
+  .details{grid-template-columns:1fr;gap:0}
+  .details dd{margin-bottom:10px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <a href="/" aria-label="We Read Meters, home">
+        <svg class="logo" viewBox="0 0 452 72" role="img" aria-label="We Read Meters">
+          <rect x="0" y="8" width="44" height="56" rx="9" fill="#FFFFFF"></rect>
+          <rect x="50" y="8" width="44" height="56" rx="9" fill="#FFFFFF"></rect>
+          <rect x="100" y="8" width="44" height="56" rx="9" fill="#F59E0B"></rect>
+          <text x="22" y="47" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="30" font-weight="700" fill="#0E3A5B">W</text>
+          <text x="72" y="47" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="30" font-weight="700" fill="#0E3A5B">R</text>
+          <text x="122" y="47" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="30" font-weight="700" fill="#14232D">M</text>
+          <text x="164" y="47" font-family="'Space Grotesk', sans-serif" font-size="33" font-weight="600" fill="#FFFFFF">We Read Meters</text>
+        </svg>
+      </a>
+      <a class="btn btn-amber" href="#quote">Get a quote</a>
+    </div>
+
+    <div class="hero">
+      <h1>Every meter read on site.<br>Every reading backed by a photo.</h1>
+      <div class="copy">
+        <p class="lead">On-site meter reading and monthly reconciliation reports for body corporates, managing agents and commercial property in Gauteng.</p>
+        <div class="acts">
+          <a class="btn btn-amber" href="#quote">Get a quote</a>
+          <a class="btn btn-line" href="#how">See how it works</a>
+        </div>
+      </div>
+
+      <div class="photo" role="img" aria-label="Illustration of a meter photo: the reading on the counter, a date stamp, and a mark showing a person checked it.">
+        <div class="face" aria-hidden="true">
+          <div class="drums">
+            <span class="drum">0</span>
+            <span class="drum">3</span>
+            <span class="drum">1</span>
+            <span class="drum">4</span>
+            <span class="drum">6</span>
+            <span class="drum tenth">2</span>
+          </div>
+          <div class="unit">kWh</div>
+        </div>
+        <div class="stamp" aria-hidden="true">
+          <span>Photo taken 30 Nov, 08:42</span>
+          <span class="ok"><span class="tick"><svg viewBox="0 0 16 16" width="13" height="13"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#14232D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Checked by a person</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <h2>Who we are</h2>
+    <div class="prose">
+      <p>We Read Meters reads your electricity meters on site every month and turns the readings into a report your managing agent can bill from. Every reading comes with a dated photo of the meter, so any figure can be checked long after the visit.</p>
+      <p>We Read Meters is a trading name of Swartz Group (Pty) Ltd, a Johannesburg company registered in 2016.</p>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>3 years</b><span>of monthly readings and reconciliation</span></div>
+      <div class="fact"><b>42 units</b><span>read every month at one Johannesburg scheme</span></div>
+      <div class="fact"><b>10+ years</b><span>in utility and service billing</span></div>
+    </div>
+    <p class="after-facts">The service is run by Keanen Swartz, who has more than ten years in utility and service billing, including time at Eskom, Johannesburg Water and Fidelity Services Group. A reference for the scheme we read is available on request.</p>
+  </div>
+</section>
+
+<section class="sec tinted" id="services">
+  <div class="wrap">
+    <h2>What we do</h2>
+    <div class="rows">
+      <div class="row"><h3>Monthly meter reading</h3><p>Every unit's meter and the bulk supply meter, read on site on the same agreed date each month.</p></div>
+      <div class="row"><h3>Photo record</h3><p>A dated photo of every meter, kept on file and available on request.</p></div>
+      <div class="row"><h3>Consumption report</h3><p>Previous reading, current reading and units used for every unit, as a spreadsheet your agent can bill from and a PDF for the record.</p></div>
+      <div class="row"><h3>Reconciliation</h3><p>We check all the meters on the property against the bulk supply meter and report the difference. Common-property use can be shared by participation quota.</p></div>
+      <div class="row"><h3>Water and gas</h3><p>Readings available on request.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li class="step"><div class="rail"><span class="num">1</span><i></i></div><div class="txt"><h3>We agree the dates</h3><p>The reading date and the report date are set around your billing cycle and stay the same every month.</p></div></li>
+      <li class="step"><div class="rail"><span class="num">2</span><i></i></div><div class="txt"><h3>We read every meter on site</h3><p>Each meter is photographed as it is read.</p></div></li>
+      <li class="step"><div class="rail"><span class="num">3</span><i></i></div><div class="txt"><h3>Every reading is checked</h3><p>Our software captures the reading from the photo, and a person confirms it against the photo before it is saved.</p></div></li>
+      <li class="step"><div class="rail"><span class="num">4</span><i></i></div><div class="txt"><h3>Unusual readings are flagged</h3><p>Built-in checks catch a reading that is lower than last month's, a meter that has rolled over, and usage that is out of line.</p></div></li>
+      <li class="step"><div class="rail"><span class="num">5</span></div><div class="txt"><h3>You receive the report</h3><p>It reaches you by the date we agreed, in time for your billing run.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec tinted" id="why">
+  <div class="wrap">
+    <h2>Why clients choose us</h2>
+    <div class="why">
+      <div><span class="tick"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#14232D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Proof behind every number</h3><p>Each reading has a dated photo of the meter. If a reading is queried, the photo shows what the meter said.</p></div></div>
+      <div><span class="tick"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#14232D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Checked by a person</h3><p>No reading goes into a report until someone has compared it with the photo.</p></div></div>
+      <div><span class="tick"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#14232D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>On time, every month</h3><p>The report reaches you by the date we agreed, in time for your billing run.</p></div></div>
+      <div><span class="tick"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#14232D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>Nothing is overwritten</h3><p>If a reading is corrected, the original is kept with the reason for the change.</p></div></div>
+      <div class="wide"><span class="tick"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#14232D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h3>We know billing</h3><p>The service is run by someone who has worked inside utility billing, so the report is built for the person who has to bill from it.</p></div></div>
+    </div>
+
+    <h2 style="margin-top:64px">Who we serve</h2>
+    <p>Any property where each unit or shop is billed from its own meter.</p>
+    <ul class="serve">
+      <li>Body corporates and HOAs</li>
+      <li>Managing agents</li>
+      <li>Commercial and retail property</li>
+      <li>New developments</li>
+    </ul>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap quote-grid">
+    <div>
+      <h2>Get a quote</h2>
+      <p class="ask">Send us the property address and the number of meters. Pricing is quoted per site.</p>
+      <div class="acts">
+        <a class="btn btn-amber" href="mailto:keanen@wereadmeters.co.za?subject=Quote%20request&amp;body=Property%20address%3A%0D%0A%0D%0ANumber%20of%20meters%3A%0D%0A%0D%0AYour%20name%20and%20number%3A%0D%0A">Email us for a quote</a>
+        <a class="btn btn-line" href="tel:+27829772042">Call 082 977 2042</a>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="who">Keanen Swartz</div>
+      <a href="tel:+27829772042">082 977 2042</a>
+      <a href="mailto:keanen@wereadmeters.co.za">keanen@wereadmeters.co.za</a>
+      <dl class="details">
+        <dt>Registered company</dt><dd>Swartz Group (Pty) Ltd</dd>
+        <dt>Registration no.</dt><dd>2016/029208/07</dd>
+        <dt>B-BBEE</dt><dd>Exempted Micro Enterprise</dd>
+        <dt>Service area</dt><dd>Based in Johannesburg, serving Gauteng. Other regions by arrangement.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">We Read Meters is a trading name of Swartz Group (Pty) Ltd, registration no. 2016/029208/07.</div>
+</footer>
+
+</body>
+</html>
